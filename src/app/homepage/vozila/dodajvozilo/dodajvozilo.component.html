@@ -1,0 +1,224 @@
+<div class="zatamni"></div>
+<div class="iksdugme" (click)="sakrijDodavanjeVozila()" style="cursor: pointer;"><img class="zatvori" height="47" width="47" src="assets/Close.svg"></div>
+<div class="vidljiv">
+  <h1 class="dodajvozilonaslov">Dodaj vozilo</h1>
+  <form #dodajVoziloForma="ngForm" (ngSubmit)="submitVozilo(dodajVoziloForma)">
+    <div class="sadrzajdodajvozilo">
+      <div class="row red">
+        <div class="col-xs-6">
+          <p class="mininaslov">Naziv vozila</p>
+          <div class="inputpolje">
+            <input class="form-control unos" ngModel name="Naziv_vozila" required type="text" placeholder="Unesite naziv">
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <p class="mininaslov">Marka vozila</p>
+          <div class="inputpolje">
+            <select class="form-select dd unos" name="Marka_vozila" required ngModel>
+              <option selected disabled>Odaberite marku</option>
+              <option value="VW">VW</option>
+              <option value="BMW">BMW</option>
+              <option value="Mercedes">Mercedes</option>
+              <option value="Renault">Renault</option>
+              <option value="Toyota">Toyota</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row red">
+        <div class="col-xs-6">
+          <p class="mininaslov">Broj šasije</p>
+          <div class="inputpolje">
+            <input class="form-control unos" ngModel name="Broj_sasije" required type="text">
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <p class="mininaslov">Broj registracije</p>
+          <div class="inputpolje">
+            <input class="form-control unos" ngModel name="Broj_registracije" required type="text">
+          </div>
+        </div>
+      </div>
+      <div class="row red">
+        <div class="col-xs-6">
+          <p class="mininaslov">Zadužena jedinica</p>
+          <div class="inputpolje">
+            <select class="form-select dd unos" name="Zaduzena_jedinica" ngModel required>
+              <option selected disabled>Odaberite jedinicu</option>
+              <option value="1">Prva</option>
+              <option value="2">Druga</option>
+              <option value="3">Treca</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <p class="mininaslov">Tip vozila</p>
+          <div class="inputpolje">
+            <select class="form-select dd unos" ngModel name="Tip_vozila" required>
+              <option selected disabled>Odaberite tip</option>
+              <option value="Terensko_vozilo">Terensko vozilo</option>
+              <option value="Motocikl">Motocikl</option>
+              <option value="Putnicko_vozilo">Putnicko vozilo</option>
+              <option value="Kombi_vozilo">Kombi vozilo</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row red">
+        <div class="col-xs-6">
+          <p class="mininaslov">Kupovna cijena</p>
+          <div class="inputpolje">
+            <input class="form-control unos" ngModel name="Kupovna_cijena" required type="text">
+            <p class="km">KM</p>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <p class="mininaslov">Godina proizvodnje</p>
+          <div class="inputpolje">
+            <select class="form-select dd unos" ngModel required name="Godina_proizvodnje">
+              <option selected disabled>Odaberite</option>
+              <option value="1985">1985</option>
+              <option value="1986">1986</option>
+              <option value="1987">1987</option>
+              <option value="1988">1988</option>
+              <option value="1989">1989</option>
+              <option value="1990">1990</option>
+              <option value="1991">1991</option>
+              <option value="1992">1992</option>
+              <option value="1993">1993</option>
+              <option value="1994">1994</option>
+              <option value="1995">1995</option>
+              <option value="1996">1996</option>
+              <option value="1997">1997</option>
+              <option value="1998">1998</option>
+              <option value="1999">1999</option>
+              <option value="2000">2000</option>
+              <option value="2001">2001</option>
+              <option value="2002">2002</option>
+              <option value="2003">2003</option>
+              <option value="2004">2004</option>
+              <option value="2005">2005</option>
+              <option value="2006">2006</option>
+              <option value="2007">2007</option>
+              <option value="2008">2008</option>
+              <option value="2009">2009</option>
+              <option value="2010">2010</option>
+              <option value="2011">2011</option>
+              <option value="2012">2012</option>
+              <option value="2013">2013</option>
+              <option value="2014">2014</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row red">
+        <div class="col-xs-6">
+          <p class="mininaslov">Kilometraža</p>
+          <div class="inputpolje">
+            <input class="form-control unos" ngModel name="Kilometraza" required type="text">
+            <p class="km">km</p>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <p class="mininaslov">ACC</p>
+          <div class="inputpolje">
+            <select class="form-select dd unos" ngModel name="ACC" required>
+              <option selected disabled>Odaberite</option>
+              <option value="Da">Da</option>
+              <option value="Ne">Ne</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row red">
+        <div class="col-xs-4">
+          <p class="mininaslov">Registrovan</p>
+          <div class="inputpolje">
+            <input type="date" class="kraciunos dd" ngModel name="Datum_registracije" required>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <p class="mininaslov">Registrovan do</p>
+          <div class="inputpolje">
+            <input type="date" class="kraciunos dd" ngModel name="Datum_isteka_registracije" required>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <p class="mininaslov">Cijena registracije</p>
+          <div class="inputpolje">
+            <p class="kmmini">KM</p>
+            <input class="form-control kraciunosdva" ngModel name="Cijena_registracije" required type="number">
+          </div>
+        </div>
+      </div>
+      <h2 style="margin-bottom: 17px;">Podaci o osiguranju</h2>
+      <div class="row red">
+        <div class="col-xs-6">
+          <p class="mininaslov">Osiguravajuća kuća</p>
+          <div class="inputpolje">
+            <select class="form-select dd unos">
+              <option selected disabled>Odaberite</option>
+              <option value="Prva_osiguravajuca_kuca">Osiguravajuca kuca 1</option>
+              <option value="Druga_osiguravajuca_kuca">Osiguravajuca kuca 2</option>
+              <option value="Treca_osiguravajuca_kuca">Osiguravajuca kuca 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <p class="mininaslov">Vrsta osiguranja</p>
+          <div class="inputpolje">
+            <select class="form-select dd unos" ngModel name="Vrsta_osiguranja" required>
+              <option selected disabled>Odaberite</option>
+              <option value="Vrsta_osiguranja_1">Vrsta osiguranja 1</option>
+              <option value="Vrsta_osiguranja_2">Vrsta osiguranja 2</option>
+              <option value="Vrsta_osiguranja_3">Vrsta osiguranja 3</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row red">
+        <div class="col-xs-6">
+          <p class="mininaslov">Osiguranje ugovoreno</p>
+          <div class="inputpolje">
+            <input type="date" style="outline:0px; border: none;" ngModel name="Datum_ugovora_osiguranja" required class="unos dd">
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <p class="mininaslov">Osiguranje ističe</p>
+          <div class="inputpolje">
+            <input type="date" style="outline:0px; border: none;" ngModel name="Datum_isteka_ugovora_osiguranja" required class="unos dd">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div *ngIf="dodajVoziloForma.valid" class="dugmeDodajVoziloDva" style="cursor: pointer;">
+            <div class="col-xs-2 ikonaD">
+              <img src="assets/Add.svg" class="dodaj" height="20" alt="dodaj">
+            </div>
+            <div class="col-xs-10 tekstdugme">
+              <button type="submit" class="dodajtekst">Dodaj vozilo</button>
+            </div>
+          </div>
+          <div *ngIf="!dodajVoziloForma.valid" class="dugmeDodajVoziloDvaZabranjeno" style="cursor: not-allowed;">
+            <div class="col-xs-2 ikonaD">
+              <img src="assets/Add.svg" class="dodaj" height="20" alt="dodaj">
+            </div>
+            <div class="col-xs-10 tekstdugme">
+              <button class="dodajtekst zab">Dodaj vozilo</button>
+            </div>
+          </div>
+          <br> <br>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

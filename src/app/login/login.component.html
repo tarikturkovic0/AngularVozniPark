@@ -1,0 +1,49 @@
+<!-- u Firebase sam dodao korisnika faruk.cidic@gmail.com sa lozinkom 123456789 -->
+<div class="pozadina container-fluid"></div>
+<div class="constainer-fluid justify-content-center login animate__animated animate__fadeIn">
+  <div class="katanac">
+    <img src="/assets/Unlock.svg" height="40" width="50" alt="katanac">
+  </div>
+  <h3 class="naslov">
+    <b>Prijavi se</b>
+  </h3>
+  <p class="tekst">
+    Da biste pristupili aplikaciji potrebno je da izvršite prijavu. <b>Ukoliko niste registrirani</b>, javite se nadređenom sa zahtjevom da vam se omogući pristup sistemu.
+  </p>
+  <form #forma="ngForm" (ngSubmit)="prijava(forma)">
+    <div class="input-group forma">
+      <div class="input-polje row">
+        <div class="col-xs-1">
+          <img src="assets/Mail%20outline.svg" style="padding-top: 3px" height="30" alt="email">
+        </div>
+        <div class="input-ikonica col-xs-11">
+          <input class="form-control" type="text" placeholder="e-mail" ngModel name="email" email required>
+        </div>
+      </div>
+      <div class="input-polje sifra row">
+        <div class="col-xs-1">
+          <img src="assets/Lock.svg" style="padding-top: 3px" height="30" alt="password">
+        </div>
+        <div class=" col-xs-11">
+          <input class="form-control" type="password" placeholder="šifra" ngModel name="password" required minlength="6">
+        </div>
+      </div>
+    </div>
+    <div *ngIf="forma.valid" class="dugme justify-content-center row">
+      <div class="col-xs-1 ikona">
+        <img src="assets/Unlock.svg" height="20" class="otkljucana" alt="otkljucan katanac neki">
+      </div>
+      <div class="col-xs-11 prijavatekst">
+        <button type="submit" class="prijava">Prijava</button>
+      </div>
+    </div>
+    <div *ngIf="!forma.valid" class="zabranjeno justify-content-center row">
+      <div class="col-xs-1 ikona">
+        <img src="assets/Unlock.svg" height="20" class="otkljucana" alt="otkljucan katanac neki">
+      </div>
+      <div class="col-xs-11 prijavatekst">
+        <button class="prijava" style="cursor: not-allowed">Prijava</button>
+      </div>
+    </div>
+  </form>
+</div>

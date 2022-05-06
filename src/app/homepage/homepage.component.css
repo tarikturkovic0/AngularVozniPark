@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+.upperbar{
+  position: absolute;
+  height: 76px;
+  left: 0px;
+  right: 190px;
+  top: 0px;
+  border-radius: 20px;
+
+  /* secondary */
+
+  background: #2F493F;
+}
+.sidebar{
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  border-top-right-radius: 60px;
+
+  /* primary */
+
+  background: #122218;
+}
+a{
+  color: black;
+}
+.toprightbar{
+  position: absolute;
+  width: 240px;
+  height: 76px;
+  right: 0px;
+  top: 0px;
+  z-index: -1;
+
+  /* primary */
+
+  background: #122218;
+}
+.selektor{
+  font-family: 'Exo 2';
+  font-size: 16px;
+  text-align: center;
+  position: absolute;
+  width: 139px;
+  height: 48px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+
+
+  /* on-color-background */
+
+  background: #FFFFFF;
+}
+.selektor-vozila{
+  left: 112px;
+  top: 28px;
+}
+.selektor-licitacija{
+  left: 251px;
+  top: 28px;
+}
+.selektori{
+  padding-top: 13px;
+}
+.row{
+  margin:0px !important;
+}
+.ikonice{
+  position: absolute;
+  top: 22px;
+
+  right: 10px;
+  z-index:3;
+}
+.ikonica{
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: #2F493F;
+  border-radius: 12px;
+}
+.ic{
+  padding-top: 6px;
+  padding-left: 6px;
+  filter: invert(90%);
+}
+.col-xs-4{
+  padding-right: 8px;
+}
+.sideikone{
+  margin-top: 100px;
+}
+.sadrzaj{
+  margin-top: 70px;
+  margin-left: 90px;
+}

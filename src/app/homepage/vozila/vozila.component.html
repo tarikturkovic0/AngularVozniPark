@@ -1,0 +1,86 @@
+<div class="container sadrzaj">
+  <div class="row">
+    <div class="pretraga col-xs-5 row">
+      <div class="input-ikonica col-xs-11">
+        <input class="form-control" name="naziv-search" style="padding-left:0" type="text" placeholder="Unesite vozilo, registracijsku oznaku, kod">
+      </div>
+      <div class="col-xs-1" style="padding-left: 0;">
+        <img src="assets/Search.svg" style="padding-top: 3px; filter: invert(50%);" height="30" alt="search">
+      </div>
+    </div>
+    <div class="col-xs-3 tipvozila">
+      <select class="form-select dd">
+        <option selected disabled>Tip vozila</option>
+        <option value="1">Putnicko vozilo</option>
+        <option value="2">Kombi vozilo</option>
+        <option value="3">Terensko vozilo</option>
+        <option value="4">Motocikl</option>
+      </select>
+    </div>
+  </div>
+  <div class="dugme row" id="dugme" (click)="prikaziFiltere()" style="cursor: pointer;">
+    <div class="col-xs-11 filteritekst">
+      <p class="filteri">Dodatni filteri</p>
+    </div>
+    <div class="col-xs-1 ikona">
+      <img [ngClass]="dugmeFilteriKliknuto ? 'naopakastrelica' : 'strelica'" src="assets/Arrow%20forward.svg" height="20" alt="strelica neka">
+    </div>
+  </div>
+  <div *ngIf="dugmeFilteriKliknuto" class="filteri">
+    <div class="ekstenzija"></div>
+    <div class="ekstenzijaDva"></div>
+    <div class="izborifilter">
+      <div class="row">
+        <form #forma = "ngForm" (ngSubmit)="filtriraj(forma)">
+        <div class="col-sm-2 f">
+          <div class="filter">
+            <input type="text" ngModel class="filterinput" name="cijena" placeholder="Nabavna cijena">
+          </div>
+        </div>
+        <div class="col-sm-2 f">
+          <div class="filter">
+            <input type="text" onfocus="(this.type='date')" ngModel class="filterinput" name="registracija" placeholder="Registriran do">
+            <img src="assets/Today.svg" class="ikonaF">
+          </div>
+        </div>
+        <div class="col-sm-2 f">
+          <div class="filter">
+            <input type="text" onfocus="(this.type='date')" ngModel class="filterinput" name="naredniservis" placeholder="Naredni servis">
+            <img src="assets/Today.svg" class="ikonaF">
+          </div>
+        </div>
+        <div class="col-sm-2 f">
+          <div class="filter">
+            <input type="text" ngModel class="filterinput" name="godinap" placeholder="Godina proizvodnje">
+          </div>
+        </div>
+        <div class="col-sm-2 f">
+          <div class="filter">
+            <select class="dropdaun" ngModel name="osiguranje">
+              <option selected disabled>Osiguranje</option>
+              <option value="1">Osiguranje 1</option>
+              <option value="2">Osiguranje 2</option>
+              <option value="3">Osiguranje 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="dugmic"><button class="providno" type="submit"> <img class="fpretraga" src="assets/Search.svg"></button></div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div [ngClass]="dugmeFilteriKliknuto ? 'pomjeren' : ''"><app-tabela [filteri] = "filteri"></app-tabela></div>
+  <div class="dugmeDodajVozilo" [ngClass]="dugmeFilteriKliknuto ? 'pomjerenoDugme' : ''" style="cursor: pointer;" (click)="prikaziDodavanjeVozila()">
+    <div class="col-xs-11 filteritekst">
+      <p class="filteri">Dodaj vozilo</p>
+    </div>
+    <div class="col-xs-1 ikona">
+      <img src="assets/Add.svg" class="dodaj" height="20" alt="dodaj">
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="dugmeVoziloKliknuto">
+  <app-dodajvozilo (prikazan) = "sakrijDodavanjeVozila($event)"></app-dodajvozilo>
+</div>

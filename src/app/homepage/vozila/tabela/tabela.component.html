@@ -1,0 +1,39 @@
+<app-loading *ngIf="prikaziLoading"></app-loading>
+<div *ngIf="!prikaziLoading" class="tabela">
+  <form #formaCRUD ="ngForm" (ngSubmit)="uradiNesto(formaCRUD)">
+  <table class="table">
+    <thead>
+    <tr class="naslovi">
+      <td></td>
+      <td class="headerT">Naziv vozila</td>
+      <td class="headerT">Registracija</td>
+      <td class="headerT">Tip vozila</td>
+      <td class="headerT">Registriran do</td>
+      <td class="headerT">Naredni servis</td>
+      <td class="headerT">Ukupan trošak</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let el of list; let indexOfelement=index;">
+      <td><input type="checkbox" name="{{kljucevi[indexOfelement]}}" ngModel value="{{kljucevi[indexOfelement]}}"></td>
+      <td>{{el.Naziv_vozila}}</td>
+      <td>{{el.Broj_registracije}}</td>
+      <td>{{el.Tip_vozila}}</td>
+      <td>{{el.Datum_isteka_registracije}}</td>
+      <td>{{el.Datum_isteka_ugovora_osiguranja}}</td>
+      <td>{{el.Kupovna_cijena}} KM</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <button type="submit" class="btn btn-success dugme">Izvrsi akciju</button>
+    <div class="akcija">
+      <select class="form-select dd" name="akcija" ngModel>
+        <option selected disabled>Akcija</option>
+        <option value="Obrisi">Obrisi</option>
+      </select>
+    </div>
+  </form>
+
+</div>
+

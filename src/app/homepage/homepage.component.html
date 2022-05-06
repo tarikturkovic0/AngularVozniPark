@@ -1,0 +1,35 @@
+<div class="upperbar">
+  <a routerLink="vozila">
+    <div class="selektor selektor-vozila">
+    <p class="selektori"><b>Vozila</b></p>
+    </div>
+  </a>
+  <a routerLink="licitacija">
+    <div class="selektor selektor-licitacija">
+    <p class="selektori"><b>Licitacija</b></p>
+    </div>
+  </a>
+</div>
+<div class="sidebar">
+  <div class="container sideikone">
+   <div> <a routerLink="vozila"><img height="40" src="assets/Car.svg" class="ic"></a></div>
+    <div class="row"><img height="40" src="assets/Line.png" class="ic"></div>
+    <div><a routerLink="analytics"><img height="37" src="assets/Pie%20chart.svg" class="ic"></a></div>
+  </div>
+</div>
+<div class="toprightbar">
+  <div class="row ikonice">
+    <div class="col-xs-4">
+      <a href="#"><div class="ikonica"><img height="28" class="ic" src="assets/Notifications%20none.svg"></div></a>
+    </div>
+    <div class="col-xs-4">
+      <a href="#"> <div class="ikonica"><img height="28" class="ic" src="assets/Tune%20horizontal.svg"></div></a>
+    </div>
+    <div class="col-xs-4">
+     <div class="ikonica" style="cursor: pointer;"><img (click)="odjava()" height="28" class="ic" src="assets/Account%20circle.svg"></div>
+    </div>
+  </div>
+</div>
+<div class="container sadrzaj">
+  <router-outlet></router-outlet>
+</div>

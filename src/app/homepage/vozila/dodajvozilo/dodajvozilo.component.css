@@ -1,0 +1,366 @@
+.sadrzaj{
+  margin-top: 30px;
+}
+
+.pretraga{
+  border-width:1px;
+  border-color:grey;
+  border-style: solid;
+  border-radius: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  margin-top: 10px;
+  width: 450px;
+  margin-right: 15px;
+  margin-left: 6px;
+}
+input{
+  font-size: 15px;
+  font-family: 'Exo 2';
+  border-width: 0;
+  box-shadow: none;
+}
+input:focus{
+  box-shadow: none;
+}
+select:focus{
+  outline: none;
+}
+.dd{
+  font-family: 'Exo 2';
+  border-width: 0;
+  padding: 7px;
+}
+.tipvozila{
+  border-width:1px;
+  border-color:grey;
+  border-style: solid;
+  border-radius: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  margin-top: 10px;
+  width: 130px;
+  margin-right: 7px;
+  margin-left: 0px;
+}
+.dropdaun{
+  background-color: #2F493F;
+  border-width:0px;
+  border-radius: 15px;
+  padding-left: 10px;
+  margin-right: 7px;
+  margin-left: 0px;
+  margin-top: 10px;
+  width: 180px;
+}
+.ikonaF{
+  position: relative;
+  filter: invert(100%);
+  margin-left: 175px;
+  bottom: 24px;
+}
+.dropdaun:focus{
+  border-width: 0px;
+  box-shadow: none;
+  outline: none;
+}
+
+.dugme{
+  top: 110px;
+  position: absolute;
+  right: 40px;
+  height: 45px;
+  width: 150px;
+  background-color: #122218;
+  font-family: 'Exo 2';
+  border-radius: 12px;
+}
+.ekstenzija{
+  position: absolute;
+  right: 30px;
+  top: 155px;
+  height: 50px;
+  border-radius:30px;
+  width: 157px;
+  background-color: #122218;
+}
+.ekstenzijaDva{
+  position: absolute;
+  right: 25px;
+  top: 140px;
+  height: 80px;
+  width: 150px;
+  background-color: #122218;
+}
+.ikona{
+  left: 103px;
+  bottom: 22px;
+}
+.strelica{
+  filter: invert(100%);
+  transform: rotate(90deg);
+}
+.naopakastrelica{
+  filter: invert(100%);
+  transform: rotate(270deg);
+}
+.filteritekst{
+  color:white;
+  right:3px;
+  top: 10px;
+}
+.filteri{
+  font-family: 'Exo 2';
+  font-size: 16px;
+  color: white;
+}
+.vidljiv{
+  display: block;
+  position: absolute;
+  width: 640px;
+  height: 100vh;
+  right: 0px;
+  top: 0px;
+  z-index: 5;
+  /* on-color-background */
+
+  background: #FFFFFF;
+}
+.iksdugme{
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  right: 640px;
+  top: 40px;
+
+  /* error-notification */
+
+  background: #C00038;
+}
+.zatvori{
+  filter: invert(100%);
+  padding-top: 17px;
+  padding-left: 19px;
+}
+.izborifilter{
+  position: absolute;
+  width: 90.55vw;
+  height: 72px;
+  right: 25px;
+  top: 168px;
+  border-radius:15px;
+  /* primary */
+
+  background: #122218;
+}
+.pomjeren{
+  margin-top:85px;
+}
+.pomjerenoDugme{
+  margin-top:60px;
+}
+.dodajvozilonaslov{
+  font-weight: 1000;
+  font-family: 'Exo 2';
+  top: 50px;
+  margin-left: 30px;
+}
+.filter{
+  position: absolute;
+  height: 48px;
+  right: 0px;
+  left:30px;
+  top: 12px;
+  width: 215px;
+  background: #2F493F;
+  border: 1px solid #B6B6B6;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.filterinput{
+  padding-top: 12px;
+  padding-left: 16px;
+  color: white;
+  font-size: 15px;
+  font-family: 'Exo 2';
+  border-width: 0;
+  border-radius: 10px;
+  box-shadow: none;
+  background-color: #2F493F;
+}
+.dodajtekst{
+  background: transparent;
+  color: white;
+  padding: 0;
+  border: none;
+  height: 35px;
+  width: 120px;
+  margin-top: -7px;
+  margin-left: -16px;
+}
+.zab{
+  cursor: not-allowed;
+}
+.dugmic{
+  position: absolute;
+  background-color: #2F493F;
+  height: 38px;
+  width: 38px;
+  border-radius: 13px;
+  border: 1px solid #B6B6B6;
+  left: 33px;
+  top: 15px;
+  right: 0px;
+}
+.fpretraga{
+  width: 28px;
+  height: 28px;
+  filter: invert(80%);
+  padding-top: 7px;
+  padding-left: 7px;
+}
+.filterinput::placeholder{
+  color: white;
+}
+.filterinput:focus{
+  border-width: 0px;
+  box-shadow: none;
+  outline: none;
+}
+.f{
+  margin-right: 20px;
+}
+.dugmeDodajVozilo{
+  top: 640px;
+  position: absolute;
+  right: 40px;
+  height: 45px;
+  width: 150px;
+  background-color: #122218;
+  font-family: 'Exo 2';
+  border-radius: 12px;
+}
+.dugmeDodajVoziloDva{
+  position: absolute;
+  right: 30px;
+  width: 150px;
+  margin-top: -10px;
+  background-color: #122218;
+  font-family: 'Exo 2';
+  border-radius: 12px;
+}
+.dugmeDodajVoziloDvaZabranjeno{
+  position: absolute;
+  right: 30px;
+  width: 150px;
+  margin-top: -10px;
+  background-color: grey;
+  font-family: 'Exo 2';
+  border-radius: 12px;
+}
+.dodaj{
+  filter: invert(90%);
+}
+.zatamni{
+  position: absolute;
+  width: 80%;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  margin: 0 0 0 0;
+  background: rgba(0, 0, 0, 0.32);
+}
+.sadrzajdodajvozilo{
+  margin-top: 25px;
+  margin-left: 30px;
+  width: 93%;
+  padding-right: 0px;
+}
+.inputpolje{
+  width: 100%;
+  height: 50px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #555A66;
+  border-radius: 7px;
+}
+.unos{
+  font-size: 18px;
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 240px;
+  border-radius: 10px;
+}
+.mininaslov{
+  position: absolute;
+  margin-top: -10px;
+  margin-left: 20px;
+  font-family: 'Exo 2';
+  font-size: 13px;
+  z-index: 10;
+  padding-left: 3px;
+  padding-right: 3px;
+  background-color: white;
+}
+.red{
+  margin-bottom: 22px;
+}
+.km{
+  font-size: 20px;
+  position: absolute;
+  margin-left: 240px;
+  margin-top: -27px;
+}
+.kmmini{
+  font-size: 20px;
+  position: absolute;
+  margin-left: 130px;
+  margin-top: 10px;
+}
+.kraciunos{
+  font-family: 'Exo 2';
+  font-size: 18px;
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 160px;
+  border-radius: 10px;
+}
+.kraciunosdva{
+  font-family: 'Exo 2';
+  font-size: 18px;
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 120px;
+  border-radius: 10px;
+}
+.kraciunos:focus{
+  outline: none;
+  border: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+h2{
+  font-family:'Exo 2';
+  font-weight: 1000;
+}
+.tekstdugme{
+  margin-left: 29px;
+  margin-top: -10px;
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: white;
+}
+.ikonaD{
+  top: 10px;
+  left: -3px;
+}
